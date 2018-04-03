@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "vue-cli-service test 'packages/**/*.test.js'",
+    "test:watch": "npm test -- --watch --verbose",
+    "styleguide": "vue-styleguidist server",
+    "styleguide:build": "vue-styleguidist build"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.6",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.6",
+    "@vue/cli-plugin-unit-jest": "^3.0.0-beta.6",
+    "@vue/cli-service": "^3.0.0-beta.6",
+    "@vue/eslint-config-prettier": "^3.0.0-beta.6",
+    "@vue/test-utils": "^1.0.0-beta.10",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.0.4",
+    "lerna": "^2.9.1",
+    "lint-staged": "^6.0.0",
+    "vue": "^2.5.16",
+    "vue-styleguidist": "^1.7.3"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": ["npm test -- --findRelatedTests", "vue-cli-service lint", "git add"],
+    "*.vue": ["npm test -- --findRelatedTests", "vue-cli-service lint", "git add"]
+  }
+}
