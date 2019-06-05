@@ -18,7 +18,7 @@
     "lerna": "^2.9.1",
     "lint-staged": "^6.0.0",
     "vue": "^2.5.16",
-    "vue-styleguidist": "^1.7.3"
+    "vue-styleguidist": "^3.13.10"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
